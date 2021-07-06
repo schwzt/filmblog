@@ -1,0 +1,72 @@
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://sun9-3.userapi.com/impg/LK-0gGWQ4lmR-Ql6DQHgAOfJIagIkmxWCz3w4Q/4VNbNR7Uluw.jpg?size=1280x849&quality=96&sign=5db105f201b96b74442642b245d0e9cb&type=album");
+  background-size: cover;
+  align-items: center;
+}
+
+.login__title {
+  font-family: "Lora", serif;
+  font-size: 50px;
+}
+
+.login__form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login__form > label {
+  font-family: 'Varela Round', sans-serif;
+  margin: 10px 0;
+}
+
+.login__input::placeholder{
+  font-family: 'Varela Round', sans-serif;
+  color: rgba(128, 128, 128, 0.568);
+}
+
+.login__input {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.login__btn {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 14px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: rgba(239, 247, 137, 0.726);
+  border: none;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.login__btn:disabled {
+cursor: not-allowed;
+background-color: rgb(158, 158, 158);
+}
+
+.login__btn-register {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 14px;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: rgba(66, 117, 85, 0.61);
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
