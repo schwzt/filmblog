@@ -1,10 +1,11 @@
 import "./SinglePost.css";
 import { useEffect, useState, useContext } from "react";
 import { Context } from "../../context/Context";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useHistory } from "react-router-dom";
 import axios from "axios";
 
 export default function SinglePost() {
+  let history = useHistory();
   const { user } = useContext(Context);
   const location = useLocation();
   const path = location.pathname.split("/")[2];
@@ -29,7 +30,7 @@ export default function SinglePost() {
       await axios.delete("/api/posts/" + path, {
         data: { username: user.username },
       });
-      window.location.replace("/");
+      history.push("/");
     } catch (err) {}
   };
 

@@ -1,9 +1,11 @@
 import "./Create.css";
 import { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import { Context } from "../../context/Context";
 import axios from "axios";
 
 function Create() {
+  let history = useHistory();
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
@@ -28,7 +30,7 @@ function Create() {
     }
     try {
       const res = await axios.post("/api/posts", newPost);
-      window.location.replace("/post/" + res.data._id);
+      history.push("/post/" + res.data._id);
     } catch (err) {}
   };
   return (
