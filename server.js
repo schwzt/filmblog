@@ -15,6 +15,8 @@ app.use(express.json());
 app.use(cors());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
+
+
 mongoose
   .connect(process.env.DATABASE, {
     useNewUrlParser: true,
@@ -23,7 +25,6 @@ mongoose
     useFindAndModify:false
   })
   .then(console.log("MongoDB connected"));
-// mongoose.set("useCreateIndex", true);
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -44,6 +45,12 @@ app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 app.use("/api/posts", postsRouter);
 app.use("/api/categories", categoryRouter);
+
+app.use(express.static(path.resolve(__dirname, "./client/build")));
+
+app.get("/", function (request, response) {
+  response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+});
 
 app.listen(process.env.PORT || 8000, function () {
   console.log("Server started on port 8000");
