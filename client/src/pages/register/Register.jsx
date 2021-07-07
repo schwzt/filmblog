@@ -1,5 +1,5 @@
 import "./Register.css";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
@@ -18,7 +18,7 @@ function Register() {
         email,
         password,
       });
-      res.data && window.location.replace("/login");
+      res.data &&<Redirect to='/login' />;
     } catch (err) {
       setError(true);
       console.log(err.message);
