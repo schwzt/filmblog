@@ -53,7 +53,7 @@ function Navbar() {
       <div className="navbar__right">
         {user ? (
           <Link to="/settings">
-            <img className="navbar-img" src={PF + user.photo} alt="" />
+            <img className="navbar-img" src={`../../../../images/${user.photo}`} alt="" />
           </Link>
         ) : (
           <ul className="navbar__list">

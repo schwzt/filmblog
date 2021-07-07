@@ -6,7 +6,7 @@ import axios from "axios";
 
 export default function Settings() {
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:8000/images/";
+  // const PF = "http://localhost:8000/images/";
   const [file, setFile] = useState(null);
   const [username, setUsername] = useState(null);
   const [email, setEmail] = useState(null);
@@ -53,7 +53,7 @@ export default function Settings() {
           <div className="settings__profile">
             <img
               className="settings__profile-picture"
-              src={file ? URL.createObjectURL(file) : PF + user.photo}
+              src={file ? URL.createObjectURL(file) : `../../../../images/${user.photo}`}
               alt=""
             />
             <label htmlFor="fileInput" className="fileInput">

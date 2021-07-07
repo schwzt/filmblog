@@ -7,7 +7,7 @@ import axios from "axios";
 function Login() {
   const emailRef = useRef();
   const passRef = useRef();
-  const {  dispatch, isFetching } = useContext(Context);
+  const {  dispatch, isFetching, error } = useContext(Context);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -51,6 +51,11 @@ function Login() {
           Register
         </Link>
       </button>
+      {error && (
+        <span style={{ color: "red", marginTop: "10px" }}>
+          Что-то пошло не так! Пожалуйста, попробуйте снова
+        </span>
+      )}
     </div>
   );
 }
