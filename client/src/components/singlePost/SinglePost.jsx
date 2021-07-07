@@ -9,7 +9,7 @@ export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
-  const PF = "http://localhost:8000/images/";
+  // const PF = "http://localhost:8000/images/";
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [upd, setUpd] = useState(false);
@@ -48,7 +48,7 @@ export default function SinglePost() {
     <div className="singlePost">
       <div className="singlePost-container">
         {post.photo && (
-          <img src={PF + post.photo} alt="" className="singlePost__img" />
+          <img src={`../../../../images/${post.photo}`} alt="" className="singlePost__img" />
         )}
         {upd ? (
           <input

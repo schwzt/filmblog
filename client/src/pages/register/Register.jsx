@@ -1,9 +1,10 @@
 import "./Register.css";
-import { Link, Redirect } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
 function Register() {
+  let history = useHistory();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -18,7 +19,7 @@ function Register() {
         email,
         password,
       });
-      res.data &&<Redirect to='/login' />;
+      res.data && history.push('/login');
     } catch (err) {
       setError(true);
       console.log(err.message);
