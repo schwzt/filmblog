@@ -45,12 +45,19 @@
   font-size: 14px;
   margin-top: 20px;
   cursor: pointer;
-  background-color: rgba(239, 247, 137, 0.726);
-  border: none;
   color: black;
-  border-radius: 10px;
   padding: 10px;
+  border: 2px solid #444;
+  padding: 7px;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all .5s;
 }
+
+.login__btn:hover{
+  color: rgba(255, 255, 255, 0.76);
+  background-color: rgb(63, 92, 64);
+  }
 
 .login__btn:disabled {
 cursor: not-allowed;
@@ -63,10 +70,16 @@ background-color: rgb(158, 158, 158);
   position: absolute;
   top: 60px;
   right: 20px;
-  background-color: rgba(66, 117, 85, 0.61);
   cursor: pointer;
-  border: none;
-  padding: 10px;
-  color: white;
+  padding: 10px 30px;
+  color: black;
   border-radius: 10px;
+  border: 1px solid #444;
+  border-radius: 20px;
+  transition: all .5s;
+  background-color: transparent;
 }
+
+.login__btn-register:hover{
+  background-color: rgba(255, 255, 255, 0.603);
+  }

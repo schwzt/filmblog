@@ -50,13 +50,11 @@ function Register() {
           placeholder="Enter your password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="register__btn">
-          <Link className="link" to="/register">
+        <button className="register__btn" type="submit">
             Register
-          </Link>
         </button>
       </form>
-      <button className="register__btn-login" type="submit">
+      <button className="register__btn-login">
         {" "}
         <Link className="link" to="/login">
           Login

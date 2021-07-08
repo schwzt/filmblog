@@ -1,5 +1,6 @@
 .post {
-  width: 385px;
+  max-width: 385px;
+  min-width: 200px;
   margin: 0 25px 40px 25px;
 }
 

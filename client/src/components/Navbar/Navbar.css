@@ -8,7 +8,6 @@
   align-items: center;
   font-family: "Josefin Sans", sans-serif;
   z-index: 999;
-  
 }
 
 .navbar__left,
@@ -21,42 +20,66 @@
 .navbar__center {
   flex: 6;
 }
-.navbar-icon{
-    font-size: 20px;
-    margin-right: 10px;
-    color: #444;
-    cursor: pointer;
+.navbar-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #444;
+  cursor: pointer;
 }
 
-.navbar__list{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.navbar__list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.navbar-item{
-    margin-right: 20px;
-    font-size: 18px;
-    font-weight: 300;
-    cursor: pointer;
-}
-
-.navbar-img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
+.navbar-item {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
 }
 
-.navbar-icon:hover{
+.navbar-item::after {
+  content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: rgb(133, 133, 133);
+    transition: width .5s;
+}
+
+.navbar-item:hover::after {
+  width: 100%;
+}
+
+
+.navbar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.navbar-icon:hover {
   transform: scale(1.1);
 }
 
-.search-icon{
-    font-size: 18px;
-    color: #444;
-    cursor: pointer;
-    margin-left: 15px;
+.search-icon {
+  font-size: 18px;
+  color: #444;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+@media (max-width: 750px) {
+  .navbar-icon {
+    font-size: 16px;
+  }
+  .navbar-item {
+    margin-right: 15px;
+    font-size: 16px;
+  }
 }

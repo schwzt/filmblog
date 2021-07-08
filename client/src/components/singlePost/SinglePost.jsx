@@ -49,7 +49,7 @@ export default function SinglePost() {
     <div className="singlePost">
       <div className="singlePost-container">
         {post.photo && (
-          <img src={`../../../../images/${post.photo}`} alt="" className="singlePost__img" />
+          <img src={`/${post.photo}`} alt="" className="singlePost__img" />
         )}
         {upd ? (
           <input

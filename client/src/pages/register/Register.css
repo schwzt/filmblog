@@ -43,12 +43,18 @@
   font-size: 14px;
   margin-top: 20px;
   cursor: pointer;
-  background-color: rgba(66, 117, 85, 0.61);
-  border: none;
   color: white;
-  border-radius: 10px;
-  padding: 10px;
+  padding: 7px;
+  border: 2px solid #444;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all .3s;
+  color: black;
 }
+.register__btn:hover{
+  color: rgba(255, 255, 255, 0.76);
+  background-color: rgb(63, 92, 64);
+  }
 
 .register__btn-login {
   font-family: 'Varela Round', sans-serif;
@@ -56,10 +62,15 @@
   position: absolute;
   top: 60px;
   right: 20px;
-  background-color: rgba(239, 247, 137, 0.726);
   cursor: pointer;
-  border: none;
-  padding: 10px;
+  padding: 10px 30px;
   color: black;
-  border-radius: 10px;
+  border: 1px solid #444;
+  border-radius: 20px;
+  transition: all .5s;
+  background-color: transparent;
 }
+
+.register__btn-login:hover{
+  background-color: rgba(255, 255, 255, 0.603);
+  }

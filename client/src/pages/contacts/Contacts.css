@@ -1,0 +1,82 @@
+.contacts {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("https://sun9-78.userapi.com/impf/c841235/v841235656/37cea/247D9f_Ee8c.jpg?size=1758x1162&quality=96&sign=ad3417ac899f351ebf07bd07c849a9ad&type=album");
+  background-size: cover;
+}
+
+.contacts__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lora", serif;
+}
+
+.contacts__title {
+  margin-top: 15%;
+  margin-bottom: 10px;
+  font-size: 100px;
+  color: rgba(27, 27, 27, 0.89);
+}
+
+.contacts__container {
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.contacts__card {
+  flex: 3;
+  min-width: 150px;
+  padding: 30px;
+  margin: 20px;
+  background-color: rgb(254, 255, 254);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s linear;
+}
+
+.contacts__card:hover {
+  
+    transform: scale(1.1);
+
+  }
+
+.contacts__card-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.contacts__card-content {
+  font-family: "Varela Round", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #444;
+  line-height: 24px;
+
+}
+
+.contacts__card-btn {
+  font-family: "Varela Round", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #444;
+  padding: 7px;
+  border-radius: 20px;
+  margin-top: auto;
+  background-color: transparent;
+  transition: all .5s;
+  width: 80%;
+  align-self: center;
+}
+
+.contacts__card-btn:hover{
+color: rgba(255, 255, 255, 0.76);
+background-color: rgb(63, 92, 64);
+}
