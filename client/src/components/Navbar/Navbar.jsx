@@ -13,9 +13,15 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__left">
-        <i className="navbar-icon fab fa-facebook"></i>
-        <i className="navbar-icon fab fa-twitter"></i>
-        <i className="navbar-icon fab fa-instagram"></i>
+        <a href="https://www.facebook.com/" rel="noreferrer"  target="_blank">
+          <i className="navbar-icon fab fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com/" rel="noreferrer"  target="_blank">
+          <i className="navbar-icon fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/" rel="noreferrer"  target="_blank">
+          <i className="navbar-icon fab fa-instagram"></i>
+        </a>
       </div>
       <div className="navbar__center">
         <ul className="navbar__list">

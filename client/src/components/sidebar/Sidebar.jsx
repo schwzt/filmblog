@@ -41,9 +41,15 @@ export default function Sidebar() {
       <div className="sidebar__item">
         <span className="sidebar__title">FOLLOW US</span>
         <div className="sidebar__social">
-          <i className="sidebar-icon fab fa-facebook"></i>
-          <i className="sidebar-icon fab fa-twitter"></i>
-          <i className="sidebar-icon fab fa-instagram"></i>
+          <a href="https://www.facebook.com/" rel="noreferrer" target="_blank">
+            <i className="sidebar-icon fab fa-facebook"></i>
+          </a>
+          <a href="https://twitter.com/" rel="noreferrer" target="_blank">
+            <i className="sidebar-icon fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/" rel="noreferrer" target="_blank">
+            <i className="sidebar-icon fab fa-instagram"></i>
+          </a>
         </div>
       </div>
     </div>

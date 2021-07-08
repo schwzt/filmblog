@@ -73,6 +73,10 @@
   transform: scale(1.1);
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
 
 @media (max-width: 750px) {
   .sidebar {

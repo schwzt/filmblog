@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Contacts from "./pages/contacts/Contacts";
+import ErrorPage from "./pages/error/ErrorPage";
 import Single from "./pages/single/Single";
 import Create from "./pages/create/Create";
 import Settings from "./pages/settings/Settings";
@@ -29,6 +30,7 @@ function App() {
         </Route>
         <Route path="/create">{user ? <Create /> : <Home />}</Route>
         <Route path="/settings">{user ? <Settings /> : <Home />}</Route>
+        <Route path="*" component={ErrorPage} />
       </Switch>
     </Router>
   );
