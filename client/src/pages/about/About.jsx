@@ -6,6 +6,7 @@ function About() {
       <div className="about__header">
         <span className="about__title">About</span>
       </div>
+      
         <p className="about__content">
           In pellentesque massa placerat duis. Iaculis at erat pellentesque
           adipiscing commodo elit. Purus faucibus ornare suspendisse sed nisi

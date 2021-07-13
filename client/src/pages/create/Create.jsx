@@ -16,7 +16,7 @@ function Create() {
     const newPost = {
       username: user.username,
       title,
-      desc,
+      desc
     };
     if (file) {
       const data = new FormData();

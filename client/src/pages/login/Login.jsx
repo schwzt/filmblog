@@ -48,12 +48,12 @@ function Login() {
       </form>
       <button className="login__btn-register">
         <Link className="link" to="/register">
-          Register
+          Sign Up
         </Link>
       </button>
       {error && (
         <span style={{ color: "red", marginTop: "10px" }}>
-          Что-то пошло не так! Пожалуйста, попробуйте снова
+          Something went wrong! Please try again
         </span>
       )}
     </div>

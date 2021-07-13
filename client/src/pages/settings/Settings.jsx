@@ -3,16 +3,16 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 export default function Settings() {
+  let history = useHistory();
   const { user, dispatch } = useContext(Context);
-  // const PF = "http://localhost:8000/images/";
   const [file, setFile] = useState(null);
-  const [username, setUsername] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [pass, setPass] = useState(null);
+  const [username, setUsername] = useState(user.username);
+  const [email, setEmail] = useState(user.email);
+  const [pass, setPass] = useState(user.password);
   const [success, setSuccess] = useState(false);
-  {console.log(user.photo)}
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,6 +23,8 @@ export default function Settings() {
       email,
       pass,
     };
+
+  console.log(updatedUser)
     if (file) {
       const data = new FormData();
       const fileName = Date.now() + file.name;
@@ -42,12 +44,27 @@ export default function Settings() {
     }
   };
 
+  const handleDelete = async (e) => {
+    const deleteUser = {
+      userId: user._id,
+    };
+    try {
+      dispatch({ type: "LOGOUT" });
+      await axios.delete(`/api/user/${user._id}`, { data: deleteUser });
+      history.push("/");
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
   return (
     <div className="settings">
       <div className="settings__container">
         <div className="settings__title">
           <span className="settings__title-update">Profile settings</span>
-          <span className="settings__title-delete">Delete profile</span>
+          <span className="settings__title-delete" onClick={handleDelete}>
+            Delete profile
+          </span>
         </div>
         <form className="settings__form" onSubmit={handleSubmit}>
           <label>Profile image</label>
@@ -70,17 +87,17 @@ export default function Settings() {
           <label>Username</label>
           <input
             type="text"
-            placeholder={user.username}
+            value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
           <label>Email</label>
           <input
             type="text"
-            placeholder={user.email}
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <label>Password</label>
-          <input type="password" onChange={(e) => setPass(e.target.value)} />
+          <input type="password" placeholder="Enter password for saving" onChange={(e) => setPass(e.target.value)} />
           <button className="settings__submit" type="submit">
             Save
           </button>

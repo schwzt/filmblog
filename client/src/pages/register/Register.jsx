@@ -51,7 +51,7 @@ function Register() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button className="register__btn" type="submit">
-            Register
+            Sign Up
         </button>
       </form>
       <button className="register__btn-login">
@@ -62,7 +62,7 @@ function Register() {
       </button>
       {error && (
         <span style={{ color: "red", marginTop: "10px" }}>
-          Что-то пошло не так! Пожалуйста, попробуйте снова
+          Something went wrong! Please try again
         </span>
       )}
     </div>

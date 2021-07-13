@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
 
-function Navbar() {
+function Navbar({toggle}) {
   const { user, dispatch } = useContext(Context);
-  // const PF = "http://localhost:8000/images/";
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
@@ -13,13 +12,13 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__left">
-        <a href="https://www.facebook.com/" rel="noreferrer"  target="_blank">
+        <a href="https://www.facebook.com/" rel="noreferrer" target="_blank">
           <i className="navbar-icon fab fa-facebook"></i>
         </a>
-        <a href="https://twitter.com/" rel="noreferrer"  target="_blank">
+        <a href="https://twitter.com/" rel="noreferrer" target="_blank">
           <i className="navbar-icon fab fa-twitter"></i>
         </a>
-        <a href="https://www.instagram.com/" rel="noreferrer"  target="_blank">
+        <a href="https://www.instagram.com/" rel="noreferrer" target="_blank">
           <i className="navbar-icon fab fa-instagram"></i>
         </a>
       </div>
@@ -75,9 +74,11 @@ function Navbar() {
             </li>
           </ul>
         )}
-
-        {/* <i className="search-icon fas fa-search"></i> */}
+        
       </div>
+      <div className="icon-mobile" onClick={toggle}>
+          <i class="fas fa-bars"></i>
+        </div>
     </div>
   );
 }

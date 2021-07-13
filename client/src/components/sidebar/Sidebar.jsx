@@ -48,7 +48,7 @@ export default function Sidebar() {
             <i className="sidebar-icon fab fa-twitter"></i>
           </a>
           <a href="https://www.instagram.com/" rel="noreferrer" target="_blank">
-            <i className="sidebar-icon fab fa-instagram"></i>
+          <i class=" sidebar-icon fab fa-instagram"></i>
           </a>
         </div>
       </div>
