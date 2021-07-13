@@ -82,3 +82,11 @@
   cursor: pointer;
 }
 
+
+
+
+@media (max-width: 750px) {
+  .settings {
+    flex-direction: column;
+  }
+}

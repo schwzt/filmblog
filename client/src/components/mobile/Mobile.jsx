@@ -42,6 +42,11 @@ function Mobile({ isOpen, toggle }) {
                   NEW POST
                 </Link>
               </li>
+              <li className="mobile-link" onClick={toggle}>
+                <Link className="link" to="/settings">
+                  SETTINGS
+                </Link>
+              </li>
               <li className="mobile-link" onClick={handleLogout}>
                 <Link className="link" to="/" onClick={toggle}>
                   LOGOUT

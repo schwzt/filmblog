@@ -69,3 +69,14 @@
 .create__submit:hover{
   background-color: rgba(141, 141, 141, 0.603);
   }
+
+  
+  
+@media (max-width: 750px) {
+  .create__submit {
+    top: 20%;
+  }
+  .create__form-container {
+    margin-left: 100px;
+  }
+}
